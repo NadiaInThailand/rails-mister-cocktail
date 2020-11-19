@@ -1,22 +1,45 @@
-<h1>Cocktails</h1>
 
-<div>
-  <%= link_to "Add new cocktail", new_cocktail_path  %>
-</div>
 
-<div>
+<!--<div>
   <%= link_to "Ingredients list", ingredients_path  %>
-</div>
-
-<div class="cocktails-list">
-  <ul>
-    <% @cocktails.each do |cocktail| %>
-     <li> <%= link_to cocktail.name, cocktail_path(cocktail.id), style:"text-decoration: none;"%> </li>
-    <% end %>
-  </ul>
-</div>
+</div> -->
 
 
 
+  <div class="container">
 
-<!--<p>Find me in app/views/cocktails/index.html.erb</p>
+    <div class="button-add">
+      <%= link_to "Add new cocktail", new_cocktail_path, :class => "form-add-cocktail" %>
+    </div>
+    <div class="grid">
+
+      <div class="flex">
+        <ul>
+          <% @cocktails.each do |cocktail| %>
+            <div class = "card-white">
+              <div class = "card-name">
+                <li> <%= link_to cocktail.name, cocktail_path(cocktail.id), style:"color: black; text-decoration: none;"%> </li>
+              </div>
+            </div>
+          <% end %>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+<!--
+      <ul> -->
+        <%# @cocktails.each do |cocktail| %>
+         <!-- <div class="card-group">
+            <div class="card-product"> -->
+            <!-- img here -->
+           <!-- </div>
+            <li> <%#= link_to cocktail.name, cocktail_path(cocktail.id), style:"color: black; text-decoration: none;"%> </li>
+          </div> -->
+        <%# end %>
+      <!--</ul> -->

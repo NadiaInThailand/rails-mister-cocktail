@@ -1,9 +1,13 @@
 
-<div>
+<div class="container">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <div class="form-inputs">
       <%= f.input :description %>
-      <%= f.association :ingredient  %>
+      <%= f.association :ingredient %>
+    </div>
 
-      <%= f.button :submit %>
+    <div class="form-actions">
+      <%= f.button :submit, :class => "form-button"%>
+    </div>
   <% end %>
 </div>

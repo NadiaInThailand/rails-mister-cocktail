@@ -1,19 +1,20 @@
 <h1><%= @cocktail.name %></h1>
 
+
 <% @cocktail.doses.each do |dose| %>
-  <p><%= dose.ingredient.name %> - <%= dose.description %></p>
+  <div class="dose-container">
+    <p><%= dose.ingredient.name %> - <%= dose.description %>   <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Confirm delete?" }, class: "btn btn-ghost"  %> </p>
+  </div>
 <% end %>
 
 
-
-<h2>Description</h2>
-
 <div>
-  <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id)%>
+  <p><%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: "btn btn-ghost"%></p>
 </div>
 
+<!--
 <div>
-  <%= link_to 'Back to cocktails list', cocktails_path, style: "text-decoration: none;" %>
-</div>
+  <%#= link_to 'Back to cocktails list', cocktails_path, class: "btn btn-ghost" %>
+</div> -->
 
 <!-- <p>Find me in app/views/cocktails/show.html.erb</p>

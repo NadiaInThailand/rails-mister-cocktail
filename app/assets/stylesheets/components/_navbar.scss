@@ -1,12 +1,26 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: sticky;
+  top: 0px;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-lewagon .navbar-brand {
+  display: flex;
+  justify-content: space-around;
 }
+
+.navbar-lewagon .navbar-brand-1 {
+  font-family: 'Raleway Dots', cursive;
+  color: red;
+}
+
+.navbar-lewagon .navbar-brand-2 {
+  font-family: 'Hind', sans-serif;
+  padding-top: 10px;
+}
+
