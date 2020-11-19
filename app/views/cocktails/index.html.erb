@@ -1,0 +1,22 @@
+<h1>Cocktails</h1>
+
+<div>
+  <%= link_to "Add new cocktail", new_cocktail_path  %>
+</div>
+
+<div>
+  <%= link_to "Ingredients list", ingredients_path  %>
+</div>
+
+<div class="cocktails-list">
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+     <li> <%= link_to cocktail.name, cocktail_path(cocktail.id), style:"text-decoration: none;"%> </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+
+<!--<p>Find me in app/views/cocktails/index.html.erb</p>
