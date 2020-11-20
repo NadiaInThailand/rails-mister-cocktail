@@ -3,6 +3,7 @@
   background: white;
   position: sticky;
   top: 0px;
+  z-index: 9999;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -24,3 +25,6 @@
   padding-top: 10px;
 }
 
+.navbar-lewagon .nav-item {
+
+}

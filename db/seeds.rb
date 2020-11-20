@@ -21,15 +21,17 @@
 require 'open-uri'
 require 'json'
 
-# url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic'
-# file = open(url).read
-# readable_file = JSON.parse(file)
+url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic'
+file = open(url).read
+readable_file = JSON.parse(file)
 
-# readable_file["drinks"].each do |item|
-#     Cocktail.create!(
-#       name: item["strDrink"]
-#     )
-# end
+20.times do
+  readable_file["drinks"].each do |item|
+     Cocktail.create!(
+       name: item["strDrink"]
+     )
+  end
+end
 
 ingredients_url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_file = open(ingredients_url).read

@@ -1,11 +1,11 @@
-  <div class="container">
-
-    <h1>☙ Ingredients ❧</h1>
-
+  <div class="container" style="margin: auto; width: 50%; text-align: center">
+    <div>
+      <h1 style="margin-left: 30px">☙ Ingredients ❧</h1>
+    </div>
     <div class="ingredients-list">
       <ul>
         <% @ingredients.each do |ingredient| %>
-          <li> <%= ingredient.name %> </li>
+          <li style="list-style: none; color: white; font-weight: bolder" > <%= ingredient.name %> </li>
         <% end %>
       </ul>
     </div>
