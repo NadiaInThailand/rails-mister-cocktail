@@ -1,16 +1,12 @@
 
 
-<!--<div>
-  <%#= link_to "Ingredients list", ingredients_path  %>
-</div> -->
-
   <div class="button-add">
     <%= link_to "Add new cocktail", new_cocktail_path, :class => "form-add-cocktail" %>
   </div>
 
 <div class="container">
   <div class="row">
-      <% @cocktails.limit(20).each do |cocktail| %>
+      <% @cocktails.each do |cocktail| %>
         <div class = "card-white">
          <h1> <%= ["🥃", "🍷", "🍸", "🍹"].sample %></h1>
           <div class = "card-name">
@@ -22,6 +18,10 @@
 </div>
 
 
+
+<!--<div>
+  <%#= link_to "Ingredients list", ingredients_path  %>
+</div> -->
 
 <!--
       <ul> -->

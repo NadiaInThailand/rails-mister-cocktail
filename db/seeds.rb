@@ -25,13 +25,13 @@ url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic'
 file = open(url).read
 readable_file = JSON.parse(file)
 
-20.times do
-  readable_file["drinks"].each do |item|
+Cocktail.destroy_all
+readable_file["drinks"].first(5).each do |item|
      Cocktail.create!(
        name: item["strDrink"]
      )
   end
-end
+
 
 ingredients_url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_file = open(ingredients_url).read
@@ -40,5 +40,6 @@ ingredients = JSON.parse(ingredients_file)
 ingredients['drinks'].each do |drink|
   Ingredient.create!(name: drink["strIngredient1"])
 end
+
 
 
